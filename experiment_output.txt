@@ -1,0 +1,114 @@
+============================================================
+Running Balanced workload with FIFO policy (1000 tasks, 10 workers)
+============================================================
+Run name: balanced_fifo
+Tasks completed: 1000
+Makespan: 41.151 s
+Average wait: 10841.829 ms
+Average turnaround: 11042.464 ms
+Max wait: 21299.875 ms
+Average simulated CPU usage: 90.48%
+Average busy workers: 4.87
+Max queue length: 519
+Average queue length: 263.18
+Completed by kind: CPU = 285, IO = 715
+Fairness gap (avg wait difference): 119.771 ms
+Worker utilization:
+  Worker 00:  47.70%
+  Worker 01:  48.49%
+  Worker 02:  47.94%
+  Worker 03:  50.26%
+  Worker 04:  49.18%
+  Worker 05:  48.53%
+  Worker 06:  49.63%
+  Worker 07:  47.68%
+  Worker 08:  48.46%
+  Worker 09:  48.44%
+
+============================================================
+Running Balanced workload with Optimized policy (1000 tasks, 10 workers)
+============================================================
+Run name: balanced_optimized
+Tasks completed: 1000
+Makespan: 43.204 s
+Average wait: 5086.873 ms
+Average turnaround: 5287.383 ms
+Max wait: 23470.146 ms
+Average simulated CPU usage: 86.21%
+Average busy workers: 4.64
+Max queue length: 232
+Average queue length: 117.58
+Completed by kind: CPU = 285, IO = 715
+Fairness gap (avg wait difference): 17400.888 ms
+Worker utilization:
+  Worker 00:  46.54%
+  Worker 01:  46.43%
+  Worker 02:  45.93%
+  Worker 03:  46.32%
+  Worker 04:  46.61%
+  Worker 05:  45.95%
+  Worker 06:  46.40%
+  Worker 07:  46.82%
+  Worker 08:  45.87%
+  Worker 09:  46.35%
+
+============================================================
+Running Stressed workload with FIFO policy (1000 tasks, 10 workers)
+============================================================
+Run name: stressed_fifo
+Tasks completed: 1000
+Makespan: 105.900 s
+Average wait: 48343.290 ms
+Average turnaround: 48611.667 ms
+Max wait: 97209.764 ms
+Average simulated CPU usage: 84.85%
+Average busy workers: 2.53
+Max queue length: 918
+Average queue length: 456.66
+Completed by kind: CPU = 678, IO = 322
+Fairness gap (avg wait difference): 950.167 ms
+Worker utilization:
+  Worker 00:  25.42%
+  Worker 01:  24.49%
+  Worker 02:  25.02%
+  Worker 03:  25.89%
+  Worker 04:  23.95%
+  Worker 05:  25.82%
+  Worker 06:  25.85%
+  Worker 07:  25.63%
+  Worker 08:  26.09%
+  Worker 09:  24.95%
+
+============================================================
+Running Stressed workload with Optimized policy (1000 tasks, 10 workers)
+============================================================
+Run name: stressed_optimized
+Tasks completed: 1000
+Makespan: 110.799 s
+Average wait: 36533.748 ms
+Average turnaround: 36802.233 ms
+Max wait: 102117.460 ms
+Average simulated CPU usage: 81.13%
+Average busy workers: 2.42
+Max queue length: 663
+Average queue length: 329.70
+Completed by kind: CPU = 678, IO = 322
+Fairness gap (avg wait difference): 53684.298 ms
+Worker utilization:
+  Worker 00:  24.28%
+  Worker 01:  24.05%
+  Worker 02:  24.41%
+  Worker 03:  24.10%
+  Worker 04:  23.98%
+  Worker 05:  24.30%
+  Worker 06:  24.26%
+  Worker 07:  23.94%
+  Worker 08:  24.44%
+  Worker 09:  24.14%
+
+==================== Final Comparison ====================
+Run                  Policy        Makespan     Avg Wait      CPU Avg    Max Queue
+balanced_fifo        FIFO           41.151s   10841.83ms      90.48%          519
+balanced_optimized   Optimized      43.204s    5086.87ms      86.21%          232
+stressed_fifo        FIFO          105.900s   48343.29ms      84.85%          918
+stressed_optimized   Optimized     110.799s   36533.75ms      81.13%          663
